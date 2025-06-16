@@ -1,7 +1,8 @@
 version: 0.2
 phases:
   install:
-    runtime-versions: corretto17
+    runtime-versions:
+      corretto: 17
   pre_build:
     commands:
       - echo In the pre_build phase...
