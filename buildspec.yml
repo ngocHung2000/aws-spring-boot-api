@@ -20,4 +20,3 @@ phases:
 artifacts:
   files:
     - 'target/*.jar'
-  base-directory: 'dist'
