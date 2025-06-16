@@ -10,10 +10,8 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn install
-  test:
-    commands:
-      - echo Running tests...
-      - mvn test
+    on-failure: ABORT
+
   post_build:
     commands:
       - echo Build completed on `date`
@@ -21,5 +19,5 @@ phases:
 
 artifacts:
   files:
-    - bike-service-0.0.1-SNAPSHOT.war
-    - .ebextensions/**/*
+    - 'target/*.jar'
+  base-directory: 'dist'
