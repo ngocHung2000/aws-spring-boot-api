@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: aws-spring-boot-api
+
+server:
+  port: ${SERVER_PORT:8088}
+  servlet:
+    context-path: /api/v1
