@@ -10,7 +10,16 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn install
+  test:
+    commands:
+      - echo Running tests...
+      - mvn test
   post_build:
     commands:
       - echo Build completed on `date`
       - ls -lah
+
+artifacts:
+  files:
+    - bike-service-0.0.1-SNAPSHOT.war
+    - .ebextensions/**/*
